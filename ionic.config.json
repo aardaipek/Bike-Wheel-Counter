@@ -1,5 +1,7 @@
 {
   "name": "bikeWheelCounter",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
