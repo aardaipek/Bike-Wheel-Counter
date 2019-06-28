@@ -9,35 +9,25 @@ export class ToastService {
 
   constructor(
     public alert: AlertController,
-    public toast: ToastController
+    public toast: ToastController,
   ) { }
 
-
-  async congrat() {
-    const toast = await this.toast.create({
-      message: 'Tebrikler 100',
-      duration: 2000,
-      position: 'top'
-    });
-    toast.present();
-  }
-
-  async showError(error) {
+  async errorAlert(error) {
     let alert = await this.alert.create({
       message: error,
-      buttons: ['Dismiss']
+      buttons: ['Dismiss'],
     });
     await alert.present();
   }
 
- async showToast(msj) {
+ async toastMessage(msj) {
     const toast = await this.toast.create({
       message: msj,
-      showCloseButton: true,
-      closeButtonText: 'Ok',
-      duration: 4000
+      duration: 2000,
+      color:'dark'
     });
    toast.present();
   }
 
+  
 }

@@ -1,0 +1,268 @@
+ion-content {
+  --background: #E0EAFC;  /* fallback for old browsers */
+  --background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Righteous", cursive;
+  --overflow: hidden;
+}
+ion-toolbar {
+  --background: #E0EAFC;  /* fallback for old browsers */
+  --background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  .outdoor-gym {
+    border: 4px solid #59d4e8;
+    box-shadow: 0 0 7px #7ad9f5, 0 0 7px #7ad9f5;
+    background-color: white;
+    .secondCircle {
+      display: flex;
+      border: 3px solid #32dbc6;
+      border-radius: 50%;
+      height: 95px;
+      width: 95px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .gym {
+    border: 4px solid #94fc13;
+    box-shadow: 0 0 7px #94fc13, 0 0 7px #f6f6f6;
+    background: #f6f6f6;
+    .secondCircle {
+      display: flex;
+      border: 3px solid #85ef47;
+      border-radius: 50%;
+      height: 95px;
+      width: 95px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .sportButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    margin: 10%;
+    margin-top: 30%;
+
+    border-radius: 50%;
+    ion-img {
+      position: relative;
+      display: flex;
+      width: 50%;
+      height: 50%;
+    }
+    ion-icon {
+      position: relative;
+      display: flex;
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+
+/*****************   MEDIA QUERIS ******************************** */
+//Iphone 5
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .outdoor-gym {
+      border: 4px solid #59d4e8;
+      box-shadow: 0 0 7px #7ad9f5, 0 0 7px #7ad9f5;
+      .secondCircle {
+        display: flex;
+        border: 3px solid #32dbc6;
+        border-radius: 50%;
+        height: 85px;
+        width: 85px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .gym {
+      border: 4px solid #94fc13;
+      box-shadow: 0 0 7px #94fc13, 0 0 7px #f6f6f6;
+      background: #f6f6f6;
+      .secondCircle {
+        display: flex;
+        border: 3px solid #85ef47;
+        border-radius: 50%;
+        height: 85px;
+        width: 85px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .sportButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90px;
+      width: 90px;
+      margin: 10%;
+      margin-top: 30%;
+
+      border-radius: 50%;
+      ion-img {
+        position: relative;
+        display: flex;
+        width: 50%;
+        height: 50%;
+      }
+      ion-icon {
+        position: relative;
+        display: flex;
+        width: 50%;
+        height: 50%;
+      }
+    }
+  }
+}
+
+//Ipad Pro
+
+@media only screen 
+  and (min-device-width: 1024px) 
+  and (max-device-width: 1366px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      
+        .outdoor-gym {
+          border: 4px solid #59d4e8;
+          box-shadow: 0 0 7px #7ad9f5, 0 0 7px #7ad9f5;
+          .secondCircle {
+            display: flex;
+            border: 3px solid #32dbc6;
+            border-radius: 50%;
+            height: 185px;
+            width: 185px;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .gym {
+          border: 4px solid #94fc13;
+          box-shadow: 0 0 7px #94fc13, 0 0 7px #f6f6f6;
+          background: #f6f6f6;
+          .secondCircle {
+            display: flex;
+            border: 3px solid #85ef47;
+            border-radius: 50%;
+            height: 185px;
+            width: 185px;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      
+        .sportButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 200px;
+          width: 200px;
+          margin: 10%;
+          margin-top: 30%;
+      
+          border-radius: 50%;
+          ion-img {
+            position: relative;
+            display: flex;
+            width: 50%;
+            height: 50%;
+          }
+          ion-icon {
+            position: relative;
+            display: flex;
+            width: 50%;
+            height: 50%;
+          }
+        }
+      }
+}
+
+//Ipad
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .cont {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      
+        .outdoor-gym {
+          border: 4px solid #59d4e8;
+          box-shadow: 0 0 7px #7ad9f5, 0 0 7px #7ad9f5;
+          .secondCircle {
+            display: flex;
+            border: 3px solid #32dbc6;
+            border-radius: 50%;
+            height: 175px;
+            width: 175px;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+        .gym {
+          border: 4px solid #94fc13;
+          box-shadow: 0 0 7px #94fc13, 0 0 7px #f6f6f6;
+          background: #f6f6f6;
+          .secondCircle {
+            display: flex;
+            border: 3px solid #85ef47;
+            border-radius: 50%;
+            height: 175px;
+            width: 175px;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      
+        .sportButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 180px;
+          width: 180px;
+          margin: 10%;
+          margin-top: 30%;
+      
+          border-radius: 50%;
+          ion-img {
+            position: relative;
+            display: flex;
+            width: 50%;
+            height: 50%;
+          }
+          ion-icon {
+            position: relative;
+            display: flex;
+            width: 50%;
+            height: 50%;
+          }
+        }
+      }
+}

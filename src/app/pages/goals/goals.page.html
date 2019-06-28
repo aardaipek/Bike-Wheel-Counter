@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="sports"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Hedef</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- <div class="background-color-effect "> -->
+    <div class="cont flex">
+    <ion-row class="row1 ">
+      <div>
+        <a class="goalButton size-goalButton flex"  (click)="select250()" ><div class="goal flex size-goal">250</div></a>
+      </div>
+
+    </ion-row>
+    <ion-row class="row2">
+
+      <div>
+        <a class="goalButton size-goalButton flex" (click)="select1000()" ><div class="goal flex size-goal">1000</div></a>
+      </div>
+
+    </ion-row>
+    <ion-row class="row3">
+      <div>
+        <a class="goalButton size-goalButton flex" (click)="select5000()" ><div class="goal flex size-goal">5000</div></a>
+      </div>
+    </ion-row>
+  </div>
+<!-- </div> -->
+  </ion-grid>
+
+</ion-content>

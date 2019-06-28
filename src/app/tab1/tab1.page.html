@@ -1,90 +1,107 @@
 <ion-header>
   <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="goals"></ion-back-button>
+        </ion-buttons>
     <ion-title>
-      Bike
+      Bağlantı
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-<ion-content >
+<ion-content>
+<!--   <ion-list *ngIf="!bluetoothList;else bluetoothConnectedButton">
+    <ion-item-divider color="light">
+      <ion-label class="bluetooth-label">
+        Bluetooth Ayarları
+      </ion-label>
+    </ion-item-divider>
+    <ion-item lines="none">
+      <ion-label>Cihazları Ara</ion-label>
+      <ion-toggle [(ngModel)]="findDevice" name="findDevice" (ionChange)="listPairedDevices($event)" color="light">
+      </ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ng-template #bluetoothConnectedButton>
+    <ion-button expand="block" color="light" (click)="deviceDisconnected()"><span>Bağlantıyı Kes </span> <br> <span>
+        {{deviceName}}</span></ion-button>
+  </ng-template> -->
 
-         <ion-item lines="none" >
-          <ion-label>Open Bluetooth</ion-label>
-          <ion-toggle (ionChange)="listPairedDevices()"  color="light"></ion-toggle>
-        </ion-item>
-        <br>
-        
-        <ion-card  *ngIf="listToggle">
-          <ion-card-header color ="tertiary">
-              Paired Devices
-          </ion-card-header>
-          <ion-card-content>
-              <ion-row>
-                  <ion-col>
-                    <ion-list  [(ngModel)]="pairedDeviceID">
-                      <ion-item lines="full" *ngFor="let i of pairedList;let j=index">
-                        <ion-label>{{i.name}}</ion-label>
-                        <ion-radio value="{{j}}" ></ion-radio>
-                      </ion-item>
-                    </ion-list>
-                  </ion-col>
-                </ion-row>
-                <ion-item lines="none">
-                    <ion-button  expand="block" fill="outline" color="success" class="submit-button" *ngIf="listToggle" (click)="selectDevice()">
-                      <ion-icon name="bluetooth"></ion-icon>&nbsp;Connect </ion-button><br>
-                        <ion-button slot="end" expand="block" fill="outline" color="danger" class="submit-button" *ngIf="listToggle" (click)="deviceDisconnected()">
-                        <ion-icon style="margin-right:5px;" name="close-circle"></ion-icon>Disconnect</ion-button>
-                    </ion-item>
-          </ion-card-content>
-        </ion-card><br>
-   <!--  <ion-card>
-      <ion-card-content>
-          <ion-list>
-              <ion-item>
-                <ion-label floating>Type..</ion-label>
-                <ion-input type="text" name="datasend" [(ngModel)]="dataSend"></ion-input>
-              </ion-item>
-            </ion-list><br>
-            <ion-button expand="block" fill="outline" color="tertiary" (click)="sendData()"><ion-icon style="margin-right:5px;" name="send"></ion-icon>Send</ion-button>
 
-          //  <ion-button ion-button full class="submit-button" (click)="sendData()">
-          //      <ion-icon name="send"></ion-icon>&nbsp;Send Data Via Bluetooth
-          //    </ion-button> 
-      </ion-card-content>
-    </ion-card> -->
-    <ion-card *ngIf="isCon">
-      <ion-card-header color="light">
-         Bike Wheels Count
-      </ion-card-header>
-           <ion-card-content>
-             <ion-label class="count1" > Your Wheel Turn : {{count}} </ion-label>
-          </ion-card-content>
-      </ion-card><br>
 
-    <ion-card *ngIf="isCon">
-      <ion-card-header color="primary">
-        Your Goals
-      </ion-card-header>
-      <ion-card-content>
-          <ion-row>
-              <ion-input  placeholder="Set Your Goal" type="number" #goal ></ion-input>
-              <ion-button color="dark"  fill="outline" (click)="setGoal(goal.value)" >
-                <ion-icon slot="start" name="checkmark"></ion-icon>
-                Ok
-              </ion-button>
-        </ion-row>    
-        <ion-label style="margin-top:3px;"> Your Daily Goal : {{yourGoal}} </ion-label>
-      </ion-card-content>
-    </ion-card><br>
-    <!-- <ion-progress-bar color="success" [value]="count" aria-valuemax="yourGoal"></ion-progress-bar><br> -->
-
-       <!-- <progress id="progress"  max={{yourGoal}} value="{{ count }}"> </progress>  -->
-    <!-- <div id="startCircle"></div><br> -->
-
-    <ion-button shape="round"  expand="block" fill="outline" color="success" class="submit-button" (click)="startRide()">
-    <ion-icon name="bicycle"></ion-icon>&nbsp;Start Ride</ion-button> 
-    <div id="wheel"></div><br>
-    
+  <div id="cont" class="cont">
    
+      <div id="circle" class="circle">
+        <a id="bluetoothCircle" class="bluetoothCircle"  (click)="listPairedDevices($event)" ><div class="secondCircle"><ion-icon name="bluetooth"></ion-icon></div></a>
+      </div>
+    
+  </div>
+
+
+  <!-- <ion-list *ngIf="!pairedDeviceList">
+    <ion-card *ngIf="listToggle">
+      <ion-card-header color="tertiary">
+        Eşleşen Cihazlar
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row>
+          <ion-col>
+            <ion-list [(ngModel)]="pairedDeviceID">
+              <ion-item lines="full" *ngFor="let i of pairedList;let j=index">
+                <ion-label>{{i.name}}</ion-label>
+                <ion-radio value="{{j}}"></ion-radio>
+              </ion-item>
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        <ion-item class="connection" lines="none">
+          <ion-button expand="block" fill="outline" color="success" class="submit-button connectBtn"
+            (click)="selectDevice()">
+            <ion-icon name="bluetooth"></ion-icon>&nbsp;Bağlan
+          </ion-button><br>
+          <ion-button slot="end" expand="block" fill="outline" color="danger" class="submit-button disconnectBtn"
+            (click)="deviceDisconnected()">
+            <ion-icon style="margin-right:5px;" name="close-circle"></ion-icon> Bağlantıyı Kes
+          </ion-button>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
+ -->
+  <ion-list *ngIf="ride">
+
+    <ion-item-divider class="rideDivider" color="light">
+      <ion-label class="ride-label">
+        Sürüş
+      </ion-label>
+    </ion-item-divider>
+
+    <ion-button *ngIf="isMaxPercentDefined" shape="round"
+      expand="block" fill="outline" color="success" class="submit-button" (click)="startRide()">
+      <ion-icon name="bicycle"></ion-icon>&nbsp;Sürmeye Başla
+    </ion-button>
+
+    
+      <ion-button *ngIf="isReadyToStart" shape="round" expand="block" fill="outline" color="danger" class="submit-button"
+        (click)="finishRide()">
+        <ion-icon name="checkmark"></ion-icon>&nbsp;Bitir
+      </ion-button>
+
+    <circle-progress *ngIf="maxBoolean" [class]='circle' [options]="ngCircleOptions"></circle-progress>
+
+    <ion-card>
+      <ion-card-header color="secondary">Günlük Hedef</ion-card-header>
+      <ion-card-content>
+        <ion-input type="number" placeholder="Hedefin.." #dailyGoal></ion-input>
+        <p *ngIf="maxBoolean" class="p1"> Bugünlük Hedefin : {{maxPercent}}</p>
+        <ion-button style="margin-top:1em;" expand="block" color="secondary" fill="outline"
+          (click)="setGoal(dailyGoal.value)">Ekle</ion-button>
+      </ion-card-content>
+    </ion-card>
+
+
+  </ion-list>
+
+
 </ion-content>

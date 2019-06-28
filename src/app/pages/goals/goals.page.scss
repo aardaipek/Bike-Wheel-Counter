@@ -1,0 +1,275 @@
+ion-content {
+  --background: #E0EAFC;  /* fallback for old browsers */
+  --background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Righteous", cursive;
+  --overflow:hidden;
+}
+ion-toolbar {
+  --background: #E0EAFC;  /* fallback for old browsers */
+  --background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* .background-color-effect {
+  background-color: #fafafa;
+  width: 100%;
+  height: 0%;
+  border-radius: 0px 0px 60% 60%;
+  display: flex;
+  justify-content: center;
+  margin: -1%;
+} */
+.size-goalButton {
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
+  margin-top: 20%;
+  text-decoration: none;
+}
+.size-goal {
+  border-radius: 50%;
+  height: 115px;
+  width: 115px;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cont {
+  flex-direction: column;
+
+  .row1 {
+    .goalButton {
+      background-color: #e4f9f5;
+      border: 14px solid #58b368;
+      box-shadow: 0 0 15px #94fc13, 0 0 15px #94fc13;
+      color: #3d84a8;
+    }
+    .goal {
+      border: 12px solid #94fc13;
+      box-shadow: 0 0 25px #94fc13, 0 0 15px #94fc13;
+      
+    }
+  }
+  .row2 {
+    .goalButton {
+      background-color: #e4f9f5;
+      border: 14px solid #ff8b00; //dıştaki circle
+      box-shadow: 0 0 15px #ffc60b, 0 0 15px #ffc60b; //shadow
+      color: #3d84a8;
+    }
+    .goal {
+      border: 12px solid #ffc60b; //küçük circle içteki
+      box-shadow: 0 0 25px #ffc60b, 0 0 15px #ffc60b;
+      
+    }
+  }
+  .row3 {
+    .goalButton {
+      background-color: #e4f9f5;
+      border: 14px solid #b01c33;
+      box-shadow: 0 0 15px #ef4339, 0 0 15px #ef4339;
+      color: #3d84a8;
+    }
+    .goal {
+      border: 12px solid #ef4339;
+      box-shadow: 0 0 25px #ef4339, 0 0 15px #ef4339;
+      
+    }
+  }
+}
+
+// Iphone X
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont {
+    flex-direction: column;
+  
+    .row1 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #58b368;
+        box-shadow: 0 0 17px #94fc13, 0 0 17px #94fc13;
+        color: #3d84a8;
+      }
+      .goal {
+        border: 20px solid #94fc13;
+        box-shadow: 0 0 25px #94fc13, 0 0 17px #94fc13;
+     
+      }
+    }
+    .row2 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #ff8b00; //dıştaki circle
+        box-shadow: 0 0 17px #ffc60b, 0 0 17px #ffc60b; //shadow
+        color: #3d84a8;
+      }
+      .goal {
+        border: 20px solid #ffc60b; //küçük circle içteki
+        box-shadow: 0 0 25px #ffc60b, 0 0 17px #ffc60b;
+      }
+    }
+    .row3 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #b01c33;
+        box-shadow: 0 0 17px #ef4339, 0 0 17px #ef4339;
+        color: #3d84a8;
+      }
+      .goal {
+        border: 12px solid #ef4339;
+        box-shadow: 0 0 25px #ef4339, 0 0 17px #ef4339;
+      }
+    }
+  }
+  .size-goalButton {
+    border-radius: 50%;
+    height: 215px;
+    width: 215px;
+    margin-top: 10%;
+    text-decoration: none;
+  }
+  .size-goal {
+    border-radius: 50%;
+    height: 190px;
+    width: 190px;
+  }
+}
+
+//Ipad Pro
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont {
+    flex-direction: column;
+  
+    .row1 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #58b368;
+        box-shadow: 0 0 35px #94fc13, 0 0 35px #94fc13;
+        color: #3d84a8;
+      }
+      .goal {
+        border: 20px solid #94fc13;
+        box-shadow: 0 0 25px #94fc13, 0 0 17px #94fc13;
+     
+      }
+    }
+    .row2 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #ff8b00; //dıştaki circle
+        box-shadow: 0 0 35px #ffc60b, 0 0 35px #ffc60b; //shadow
+        color: #3d84a8;
+      }
+      .goal {
+        border: 20px solid #ffc60b; //küçük circle içteki
+        box-shadow: 0 0 25px #ffc60b, 0 0 17px #ffc60b;
+      }
+    }
+    .row3 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #b01c33;
+        box-shadow: 0 0 35px #ef4339, 0 0 35px #ef4339;
+        color: #3d84a8;
+      }
+      .goal {
+        border: 20px solid #ef4339;
+        box-shadow: 0 0 25px #ef4339, 0 0 17px #ef4339;
+      }
+    }
+  }
+  .size-goalButton {
+    border-radius: 50%;
+    height: 340px;
+    width: 340px;
+    margin-top: 20%;
+    text-decoration: none;
+  }
+  .size-goal {
+    border-radius: 50%;
+    height: 315px;
+    width: 315px;
+  }
+
+
+
+}
+
+//Ipad
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont {
+    flex-direction: column;
+  
+    .row1 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #58b368;
+        box-shadow: 0 0 35px #94fc13, 0 0 35px #94fc13;
+        color: #3d84a8;
+      }
+      .goal {
+        border: 20px solid #94fc13;
+        box-shadow: 0 0 25px #94fc13, 0 0 17px #94fc13;
+     
+      }
+    }
+    .row2 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #ff8b00; //dıştaki circle
+        box-shadow: 0 0 35px #ffc60b, 0 0 35px #ffc60b; //shadow
+        color: #3d84a8;
+      }
+      .goal {
+        border: 20px solid #ffc60b; //küçük circle içteki
+        box-shadow: 0 0 25px #ffc60b, 0 0 17px #ffc60b;
+      }
+    }
+    .row3 {
+      .goalButton {
+        background-color: #e4f9f5;
+        border: 17px solid #b01c33;
+        box-shadow: 0 0 35px #ef4339, 0 0 35px #ef4339;
+        color: #3d84a8;
+      }
+      .goal {
+        border: 20px solid #ef4339;
+        box-shadow: 0 0 25px #ef4339, 0 0 17px #ef4339;
+      }
+    }
+  }
+  .size-goalButton {
+    border-radius: 50%;
+    height: 240px;
+    width: 240px;
+    margin-top: 20%;
+    text-decoration: none;
+  }
+  .size-goal {
+    border-radius: 50%;
+    height: 215px;
+    width: 215px;
+  }
+
+
+
+}

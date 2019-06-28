@@ -11,11 +11,17 @@ import { AppComponent } from "./app.component";
 
 import { BluetoothSerial } from "@ionic-native/bluetooth-serial/ngx";
 
+import { NgCircleProgressModule } from 'ng-circle-progress';
+
+
+
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
+    NgCircleProgressModule.forRoot({}),
     IonicModule.forRoot(),
     AppRoutingModule, ],
   providers: [

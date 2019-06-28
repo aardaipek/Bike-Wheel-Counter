@@ -1,27 +1,116 @@
 ion-item-divider {
   min-height: 1px !important;
 }
-ion-progress-bar {
-  height: 30px;
+.rideDivider {
+  margin-bottom: 1em;
 }
-#wheel {
-  left:20%;
-  margin: 20px;
-  width: 200px;
-  height: 200px;
-  position: relative;
+.p1 {
+  font-weight: 100 !important;
+  color: #35fdad !important;
 }
-progress {
-  width:100%;
-  border-radius: 10px;
-  background-color: aqua;
+.bluetooth-label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
 }
-#startCircle{
-  left:20%;
-  margin: 20px;
-  width: 200px;
-  height: 200px;
-  position: relative;
+.ride-label {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+.connection {
+  display: flex;
+  padding-top: 1em;
+  ion-button {
+    display: flex;
+    justify-content: space-around;
+    height: 3em;
+    width: 9em;
+  }
+}
+ion-content {
+  --background: #E0EAFC;  /* fallback for old browsers */
+  --background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Righteous", cursive;
+  --overflow: hidden;
+}
+ion-toolbar {
+  --background: #E0EAFC;  /* fallback for old browsers */
+  --background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  --background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
+.cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  .circle{
+    display: flex;
+    justify-content: center;
+    margin-top:40%;
+
+  .bluetoothCircle {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #54a8fd;
+    border: 20px solid #3d84a8;
+    box-shadow: 0 0 15px #3d84a8,0 0 15px #3d84a8;
+    border-radius: 50%;
+    height: 290px;
+    width: 290px;
+    text-decoration: none;
+    color: white;
+    animation:  pulse 5s  infinite ;
+    
+}
+
+.secondCircle{
+    display: flex;
+    border: 60px solid #189ad3;
+    box-shadow: 0 0 25px #4a4a48,0 0 15px #3d84a8;
+    border-radius: 50%;
+    height: 260px;
+    width: 260px;
+    //box-shadow: 0 0 0 3px #107dac;
+    align-items: center;
+    justify-content: center;
+
+    ion-icon {
+      width: 50%;
+      height: 50%;
+      color: white;
+    }
+    
+}
+  }
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(25, 181, 254, 1);
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 25px rgba(25, 181, 254, 1);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(25, 181, 254, 1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(25, 181, 254, 1);
+    box-shadow: 0 0 0 0 rgba(25, 181, 254, 1);
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 15px rgba(25, 181, 254, 1);
+    box-shadow: 0 0 0 100px rgba(204, 169, 44, 0);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+    box-shadow: 0 0 0 0 rgba(204, 169, 44, 0);
+  }
+}

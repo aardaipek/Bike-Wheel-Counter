@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sürüş</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button expand="block" (click)="disconnect()" color="light" fill="outline"><ion-icon name="body"></ion-icon>Bitir</ion-button>
+
+  <circle-progress [class]='circle' [options]="ngCircleOptions"></circle-progress>
+  
+</ion-content>
