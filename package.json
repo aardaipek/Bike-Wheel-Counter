@@ -28,7 +28,7 @@
     "@types/jquery": "^3.3.29",
     "cordova-plugin-bluetooth-serial": "0.4.7",
     "core-js": "^2.5.4",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng-circle-progress": "1.4.1",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
